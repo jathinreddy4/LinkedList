@@ -1,5 +1,10 @@
-public class insert 
+public class insertDelete 
 {
+    private int size;
+    insertDelete()
+    {
+        this.size = 0;
+    }
     Node head;
     class Node 
     {
@@ -10,6 +15,7 @@ public class insert
         {
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -63,13 +69,59 @@ public class insert
         System.out.println("NULL");
     }
 
+    //deletefirst
+    public void deletefirst()
+    {
+        if(head == null)
+        {
+            System.out.println("The list is empty");
+        }
+        size--;
+        head = head.next;
+    }
+
+    public void deleteLast()
+    {
+        if(head == null)
+        {
+            System.out.println("The list is empty");
+        }
+        size--;
+        Node secondlast = head;
+        Node last = head.next;
+        while(last.next != null)
+        {
+            last = last.next;
+            secondlast = secondlast.next;
+        }
+        secondlast.next = null;
+    }
+
+    public int gettingsize()
+    {
+        return size;
+    }
+
     public static void main(String[] args) 
     {
-        insert ll = new insert();
-        ll.addFirst("a");
-        ll.addFirst("is");
-        ll.addLast("list"); 
-        ll.printList(); 
+        insertDelete ll = new insertDelete();
+        ll.addFirst("this");
+        ll.addLast("is");
+        ll.addLast("the");
+        ll.addLast("beginning");
+        
+        ll.printList();
+
+        ll.deletefirst();
+        ll.printList();
+        ll.deleteLast();
+        ll.printList();
+
+        //size;
+
+        System.out.println(ll.gettingsize());
+        
+
         
         
     }
