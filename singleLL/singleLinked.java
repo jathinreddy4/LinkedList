@@ -25,5 +25,15 @@ public class singleLinked
         ll.remove(0);
         System.out.println(ll);
 
+
+        //searching
+        for(int i=0; i<ll.size(); i++)
+        {
+            if(ll.get(i) == "is")
+            {
+                System.out.println("this found at index " + ll.get(i));
+            }
+        }
+
     }    
 }
