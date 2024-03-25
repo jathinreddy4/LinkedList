@@ -17,7 +17,7 @@ public class insertDelete
             this.next = null;
             size++;
         }
-    }
+    }     
 
     // add @first
     public void addFirst(String data)
