@@ -14,7 +14,7 @@ class Node
 
 public class medium4
 {   // function to reverse a LL.
-    public  boolean checkloop(Node head) 
+    public static  boolean checkloop(Node head) 
     {
         Node fast = head;
         Node slow = head;
@@ -40,11 +40,12 @@ public class medium4
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
-
-        
-
-        
-
-      
+        boolean hasLoop = checkloop(head);
+        if (hasLoop) {
+            System.out.println("The linked list has a loop.");
+        } else {
+            System.out.println("The linked list does not have a loop.");
+        }
+ 
     }
 }

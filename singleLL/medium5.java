@@ -33,6 +33,6 @@ public class medium5
                 return slow; // return the node where the loops starts. ok (index of the node)
             }
         }
-        return null // no loop exists
+        return null; // no loop exists
     }
 }
