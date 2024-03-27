@@ -9,10 +9,11 @@ class Node
         this.next = null;
     }
 }
-Node head;
+
 
 public class medium5 
 {
+    static Node head;
     public static Node findindex(Node head)
     {  
         Node slow = head;
