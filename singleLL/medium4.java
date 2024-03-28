@@ -13,7 +13,7 @@ class Node
 }
 
 public class medium4
-{   // function to reverse a LL.
+{   
     public static  boolean checkloop(Node head) 
     {
         Node fast = head;
