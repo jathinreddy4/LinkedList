@@ -9,33 +9,37 @@ class Node
         this.next = null;
     }
 }
-
-public class medium1
+public class medium10 
 {
-    public static Node findmid(Node head)
+    static Node head;
+    public static Node removemid(Node head)
     {
         Node slow = head;
         Node fast = head;
+        Node prevslow = head;
 
-        while(slow.next != null && fast != null && fast.next != null)
+        while(slow != null && fast != null && fast.next != null)
         {
-            slow = slow.next;
             fast = fast.next.next;
+            slow = slow.next;
+            prevslow = slow;
+            
         }
-        return slow;
-
-    }
-
+        prevslow.next = prevslow.next.next;
+        return head;
+    } 
+    
     public static void print(Node head)
     {
         Node temp = head;
-        while(temp != null)
+        while(temp!= null)
         {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
         System.out.println();
     }
+
     public static void main(String args[])
     {
         Node head = new Node(1);
@@ -50,7 +54,10 @@ public class medium1
         print(head);
 
         System.out.println("Mid of the list is : ");
-        head = findmid(head);
+        head = removemid(head);
         print(head);
     }
+
+
+    
 }
