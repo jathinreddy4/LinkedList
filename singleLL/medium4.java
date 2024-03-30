@@ -1,4 +1,4 @@
-
+//https://leetcode.com/problems/linked-list-cycle/
 class Node 
 {
     int data;
