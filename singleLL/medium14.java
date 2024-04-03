@@ -66,7 +66,7 @@ public class medium14
         if(carry == 1)
         {
             Node newnode = new Node(1);
-            head = reverse(head);
+            
             newnode.next = head;
             head= newnode;
         }
