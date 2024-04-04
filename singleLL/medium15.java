@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/add-two-numbers/
 class Node {
     int data;
     Node next;
@@ -23,9 +24,9 @@ public class medium15
         Node ptr = result;
     
         int carry = 0 ;
-        while(l1 != null && l2 != null)
+        while(l1 != null || l2 != null)
         {
-            int sum = 0 + carry;
+            int sum = 0;
 
             if(l1 != null)
             {
@@ -38,6 +39,8 @@ public class medium15
                 sum += l2.data;
                 l2 = l2.next;
             }
+            
+            sum = sum+carry;
 
             carry = sum/10;
             sum = sum%10;
@@ -78,7 +81,7 @@ public class medium15
         Node l2 = new Node(9);
         l2.next = new Node(9);
         l2.next.next = new Node(9);
-        l1.next.next.next = new Node(9);
+        l2.next.next.next = new Node(9);
 
         Node anss = add(l1, l2);
         print(anss);
